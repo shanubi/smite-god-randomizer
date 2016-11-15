@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+    </title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Patua+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+  </head>
+  <body>
+    <br>
+    <center>
+    <br>
+    <h1 class="header">SMITE Random God Generator</h1>
+    <br>
+    </center>
+    <div>
+      <center>
+        <div id="God_Randomizer">
+          <h1 class="god_name" id="Randomized_God">
+          </h1>
+          <br>
+          <br class="filler">
+          <br class="filler">
+          <br id="filler_" class="filler">
+          <img id="God_Default_Card" src="https://shanubi.github.io/smite-god-randomizer/assets/default_cards/extras/Default_Card_Extra_1.png" onclick="randomize_god()"/>
+          <br>
+          <br>
+          <br>
+          <center>
+            </div>
+          <br>
+          <style type="text/css">
+            body{
+                background-color:#f0f0f0;
+            }
+            h1.header{
+                font-family: 'Bangers', cursive;
+                font-size: 500%;
+            }
+            h1.god_name{
+                font-family: 'Patua One', cursive;
+            }
+            #God_Default_Card{
+                border-radius: 13px;
+            }
+            #God_Randomizer_Button {
+                background-color:#f0f0f0;
+                outline-color: #f0f0f0;
+                outline-width: 10px;
+            }
+            #filler_{
+                line-height: 1px;
+            }
+          </style>
+          <script type="text/javascript">
+            var currentgod;
+            var currentgod_name;
+            function randomize_god() {
+              currentgod = gods[Math.round(Math.random() * gods.length)];
+              $(".filler").hide();
+              $("#God_Default_Card").attr("src","https://shanubi.github.io/smite-god-randomizer/assets/default_cards/T_"+currentgod.var+"_Default_Card.png");
+              $("#God_Default_Card").attr("height","512");
+              $("#God_Default_Card").attr("width","388");
+              document.getElementById("Randomized_God").innerHTML = currentgod.name;
+            }
+            function default_screen() {
+              $(".filler").show();
+              document.getElementById("Randomized_God").innerHTML = "";
+              $("#God_Default_Card").attr("src","https://shanubi.github.io/smite-god-randomizer/assets/default_cards/extras/Default_Card_Extra_1.png");
+              $("#God_Default_Card").attr("height","");
+              $("#God_Default_Card").attr("width","");
+            }
+            var gods = [];
+            var Agni = {
+              name:"Agni",
+              var:"Agni"};
+            var AMC = {
+              name:"Ah Muzen Cab",
+              var:"AMC"};
+            var AhPuch = {
+              name:"Ah Puch",
+              var:"AhPuch"};
+            var Amaterasu = {
+              name:"Amaterasu",
+              var:"Amaterasu"};
+            var Anhur = {
+              name:"Anhur",
+              var:"Anhur"};
+            var Anubis = {
+              name:"Anubis",
+              var:"Anubis"};
+            var AoKuang = {
+              name:"Ao Kuang",
+              var:"AoKuang"};
+            var Aphrodite = {
+              name:"Aphrodite",
+              var:"Aphrodite"};
+            var Apollo = {
+              name:"Apollo",
+              var:"Apollo"};
+            var Arachne = {
+              name:"Arachne",
+              var:"Arachne"};
+            var Ares = {
+              name:"Ares",
+              var:"Ares"};
+            var Artemis = {
+              name:"Artemis",
+              var:"Artemis"};
+            var Athena = {
+              name:"Athena",
+              var:"Athena"};
+            var Awilix = {
+              name:"Awilix",
+              var:"Awilix"};
+            var Bacchus = {
+              name:"Bacchus",
+              var:"Bacchus"};
+            var Bakasura = {
+              name:"Bakasura",
+              var:"Bakasura"};
+            var Bastet = {
+              name:"Bastet",
+              var:"Bastet"};
+            var Bellona = {
+              name:"Bellona",
+              var:"Bellona"};
+            var Cabrakan = {
+              name:"Cabrakan",
+              var:"Cabrakan"};
+            var Camazotz = {
+              name:"Camazotz",
+              var:"Camazotz"};
+            var Chaac = {
+              name:"Chaac",
+              var:"Chaac"};
+            var ChangE = {
+              name:"Chang'e",
+              var:"ChangE"};
+            var Chiron = {
+              name:"Chiron",
+              var:"Chiron"};
+            var Chronos = {
+              name:"Chronos",
+              var:"Chronos"};
+            var Cupid = {
+              name:"Cupid",
+              var:"Cupid"};
+            var ErLangShen = {
+              name:"Erlang Shen",
+              var:"ErLangShen"};
+            var Fafnir = {
+              name:"Fafnir",
+              var:"Fafnir"};
+            var Fenrir = {
+              name:"Fenrir",
+              var:"Fenrir"};
+            var Freya = {
+              name:"Freya",
+              var:"Freya"};
+            var Geb = {
+              name:"Geb",
+              var:"Geb"};
+            var GuanYu = {
+              name:"Guan Yu",
+              var:"GuanYu"};
+            var Hades = {
+              name:"Hades",
+              var:"Hades"};
+            var HeBo = {
+              name:"He Bo",
+              var:"HeBo"};
+            var Hel = {
+              name:"Hel",
+              var:"Hel"};
+            var Hercules = {
+              name:"Hercules",
+              var:"Hercules"};
+            var HouYi = {
+              name:"Hou Yi",
+              var:"HouYi"};
+            var HunBatz = {
+              name:"Hun Batz",
+              var:"HunBatz"};
+            var Isis = {
+              name:"Isis",
+              var:"Isis"};
+            var Izanami = {
+              name:"Izanami",
+              var:"Izanami"};
+            var Janus = {
+              name:"Janus",
+              var:"Janus"};
+            var JingWei = {
+              name:"Jing Wei",
+              var:"JingWei"};
+            var Kali = {
+              name:"Kali",
+              var:"Kali"};
+            var Khepri = {
+              name:"Khepri",
+              var:"Khepri"};
+            var Kukulkan = {
+              name:"Kukulkan",
+              var:"Kukulkan"};
+            var Kumbhakarna = {
+              name:"Kumbhakarna",
+              var:"Kumbhakarna"};
+            var Loki = {
+              name:"Loki",
+              var:"Loki"};
+            var Medusa = {
+              name:"Medusa",
+              var:"Medusa"};
+            var Mercury = {
+              name:"Mercury",
+              var:"Mercury"};
+            var NeZha = {
+              name:"Ne Zha",
+              var:"NeZha"};
+            var Neith = {
+              name:"Neith",
+              var:"Neith"};
+            var Nemesis = {
+              name:"Nemesis",
+              var:"Nemesis"};
+            var Nox = {
+              name:"Nox",
+              var:"Nox"};
+            var NuWa = {
+              name:"Nu Wa",
+              var:"NuWa"};
+            var Odin = {
+              name:"Odin",
+              var:"Odin"};
+            var Osiris = {
+              name:"Osiris",
+              var:"Osiris"};
+            var Poseidon = {
+              name:"Poseidon",
+              var:"Poseidon"};
+            var Ra = {
+              name:"Ra",
+              var:"Ra"};
+            var Raijin = {
+              name:"Raijin",
+              var:"Raijin"};
+            var Ram = {
+              name:"Rama",
+              var:"Ram"};
+            var Ratatoskr = {
+              name:"Ratatoskr",
+              var:"Ratatoskr"};
+            var Ravana = {
+              name:"Ravana",
+              var:"Ravana"};
+            var Scylla = {
+              name:"Scylla",
+              var:"Scylla"};
+            var Serqet = {
+              name:"Serqet",
+              var:"Serqet"};
+            var Skadi = {
+              name:"Skadi",
+              var:"Skadi"};
+            var Sobek = {
+              name:"Sobek",
+              var:"Sobek"};
+            var Sol = {
+              name:"Sol",
+              var:"Sol"};
+            var SunWukong = {
+              name:"Sun Wukong",
+              var:"SunWukong"};
+            var Susano = {
+              name:"Susano",
+              var:"Susano"};
+            var Sylvanus = {
+              name:"Sylvanus",
+              var:"Sylvanus"};
+            var Terra = {
+              name:"Terra",
+              var:"Terra"};
+            var Thanatos = {
+              name:"Thanatos",
+              var:"Thanatos"};
+            var Thor = {
+              name:"Thor",
+              var:"Thor"};
+            var Thoth = {
+              name:"Thoth",
+              var:"Thoth"};
+            var Tyr = {
+              name:"Tyr",
+              var:"Tyr"};
+            var Ullr = {
+              name:"Ullr",
+              var:"Ullr"};
+            var Vamana = {
+              name:"Vamana",
+              var:"Vamana"};
+            var Vulcan = {
+              name:"Vulcan",
+              var:"Vulcan"};
+            var Xbalanque = {
+              name:"Xbalanque",
+              var:"Xbalanque"};
+            var XingTian = {
+              name:"Xing Tian",
+              var:"XingTian"};
+            var Ymir = {
+              name:"Ymir",
+              var:"Ymir"};
+            var Zeus = {
+              name:"Zeus",
+              var:"Zeus"};
+            var ZhongKui = {
+              name:"Zhong Kui",
+              var:"ZhongKui"};
+            gods.push(Agni,AMC,AhPuch,Amaterasu,Anhur,Anubis,AoKuang,Aphrodite,Apollo,Arachne,Ares,Artemis,Athena,Awilix,Bacchus,Bakasura,Bastet,Bellona,Cabrakan,Camazotz,Chaac,ChangE,Chiron,Chronos,Cupid,ErLangShen,Fafnir,Fenrir,Freya,Geb,GuanYu,Hades,HeBo,Hel,Hercules,HouYi,HunBatz,Isis,Izanami,Janus,JingWei,Kali,Khepri,Kukulkan,Kumbhakarna,Loki,Medusa,Mercury,NeZha,Neith,Nemesis,Nox,NuWa,Odin,Osiris,Poseidon,Ra,Raijin,Ram,Ratatoskr,Ravana,Scylla,Serqet,Skadi,Sobek,Sol,SunWukong,Susano,Sylvanus,Terra,Thanatos,Thor,Thoth,Tyr,Ullr,Vamana,Vulcan,Xbalanque,XingTian,Ymir,Zeus,ZhongKui);
+          </script>
+          </body>
+        </html>
